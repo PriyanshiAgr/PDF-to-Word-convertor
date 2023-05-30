@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Word Convertor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" width="80px" alt="logo">
+        <h3>PDF Convertor</h3>
+    </nav>
+    <hr>
+    <div class="head">
+        <img src="images/logo1.png" width="120px" alt="">
+        <h2>PDF to Word Convertor</h2>
+        <p>Convert PDF to Word Document</p>
+    </div>
+
+    <div class="container"></div>
+    <div class="file">
+        <img src="images/logo2.png" width="120px" alt="">
+        <div class="btn1">
+            <input type="file" id="fileInput">
+            <button class="filebtn"><i class="fa-solid fa-file-plus"></i>Choose Files</button>
+            <span class="filelabel"></span>
+        </div>
+    </div>
+    <div class="btn2">
+        <button class="btnload" onclick="loadPDF()">Convert & Download</button>
+    </div>
+
+    <div id="pdfContainer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+    <!-- script -->
+    <script> Array.prototype.forEach.call(document.querySelectorAll('.filebtn'),function(button){
+        const hiddenInput = button.parentElement.querySelector('#fileInput');
+        const label =button.parentElement.querySelector('.filelabel');
+        const defaulLabelText ='No file(s) Selected';
+        
+        label.textContent = defaulLabelText;
+        label.title = defaulLabelText;
+        button.addEventListener('click',function(){
+            hiddenInput.click();
+        });
+        hiddenInput.addEventListener('change' ,function (){
+            const filenameList = Array.prototype.map.call(hiddenInput.files, function (file){
+                return file.name;
+            });
+            label.textContent = filenameList.join(' ,') || defaulLabelText;
+        });
+        });
+        
+        </script>
+</body>
+<script src="script.js"></script>
+</html>

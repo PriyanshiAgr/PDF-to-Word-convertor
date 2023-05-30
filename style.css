@@ -1,0 +1,78 @@
+.navbar h3{
+    margin-left: 90px;
+    margin-top: -55px;
+    font-size: 25px;
+    font-family: 'Luckiest Guy', Courier, monospace;
+}
+div.head p{
+    text-align: center;
+    font-family: 'Tajawal', Courier, monospace;
+    font-size: 23px;
+    margin-top: -15px;
+}
+div.head img{
+    margin-left: 515px;
+    margin-top: 33px;
+}
+div.head h2{
+    text-align: center;
+    margin-top: -82px;
+    font-family: 'Tajawal', Courier, monospace;
+    font-size: 30px;
+}
+div.container{
+    background-color: coral;
+    width: 1000px;
+    height: 250px;
+    margin-left: 250px;
+    border-radius: 20px;
+}
+div.file{
+    background-color: rgb(253, 158, 124);
+    width: 975px;
+    height: 225px;
+    margin-left: 260px;
+    margin-top: -240px;
+    border-radius: 20px;
+    border: dashed white 2px;
+}
+.file img{
+    margin-left: 420px;
+    margin-top: 10px;
+}
+.file button{
+    background-color: white;
+    padding: 10px;
+    width: 170px;
+    font-size: 20px;
+    font-weight: 700;
+    border: white solid 3px;
+    border-radius: 10px;
+    margin-left: 400px;
+    cursor: pointer;
+}
+.file button:hover{
+    background-color: rgb(225, 213, 208);
+}
+
+.btn2 button{
+    background-color: white;
+    color: coral;
+    padding: 10px;
+    width: 300px;
+    font-size: 25px;
+    font-weight: 700;
+    border: coral solid 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 600px;
+}
+.btn2 button:hover{
+    background-color: coral;
+    border: coral solid 3px;
+    color: white;
+}
+.btn1 input{
+    display: none;
+}
